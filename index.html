@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorateur, donde puedes realizar tus compras con seguridad</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Donde puedes encontrar la seguridad de comprar en linea</h1>
+    </header>
+    
+    <nav>
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#acerca">Acerca de Nosotros</a>
+        <span id="indicador">Carrito: <span id="contador">0</span></span>
+    </nav>
+    
+    <div class="contenedor" id="productos">
+        <h1>Productos mas vendidos</h1>
+        <div class="product">
+            <img src="images/audifonos.jpg" alt="Producto 1">
+            <h3>Audifonos Bluetooth</h3>
+            <p>$10.00</p>
+            <button onclick="agregarAlCarrito()">Agregar al Carrito</button>
+        </div>
+        <div class="product">
+            <img src="images/teclado.webp" alt="Producto 2">
+            <h3>Teclado de oficina</h3>
+            <p>$15.00</p>
+            <button onclick="agregarAlCarrito()">Agregar al Carrito</button>
+        </div>
+        <div class="product">
+            <img src="images/mouse.webp" alt="Producto 3">
+            <h3>Mouse de oficina</h3>
+            <p>$20.00</p>
+            <button onclick="agregarAlCarrito()">Agregar al Carrito</button>
+        </div>
+    </div>
+
+    <script>//JavaScript
+        let contadorcarrito = 0;
+    
+        function agregarAlCarrito() { //La función agregarAlCarrito es llamada al dar click al botón "Agregar al Carrito" y aumenta cada que se de click
+            contadorcarrito++; //Incrementa el contador del carrito
+            document.getElementById('contador').textContent = contadorcarrito; //Para actualiza el indicador
+        }
+    </script>
+</body>
+</html>
